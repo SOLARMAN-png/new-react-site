@@ -31,6 +31,7 @@ const handleContactSubmit = async (e) => {
       // success — reset form or show a message
       form.reset();
       console.log('Contact submitted', data);
+      alert('Message sent successfully');
     } catch (err) {
       console.error('Contact submit error', err);
    }
