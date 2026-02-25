@@ -13,11 +13,9 @@ li {
 }
 
 body {
-  /* background: #07083E; */
-  /* background-color: #080936; */
   background-color: #0f172a;
   margin: 0;
-  font-family: "Libre Baskerville", -apple-system, BlinkMacSystemFont, Arial, Helvetica, sans-serif;
+  font-family: "Faustina", -apple-system, BlinkMacSystemFont, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -109,7 +107,7 @@ span {
   box-sizing: border-box;
 }
 
-.headerContainer {
+/* .headerContainer {
   grid-column: span 8;
   padding: 0 0 0 5%;
   margin: 0 0 50px 0;
@@ -118,14 +116,25 @@ span {
   top: 0;
   left: 0;
   width: 100%;
-  /* background-color: #080936; */
   background-color: #0f172a;
   border: 5px solid #0f172a;
-}
+} */
 
-.headerContainer h1 {
-  grid-column: 1 / 4;
-  padding-right: 5px;
+.headerContainer {
+  width: 94%;
+  margin: 0 3%;
+  padding: 0;
+  background-color: #0f172a;
+  border: 5px solid #0f172a;
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid gray;
 }
 
 .sideBar-nav {
@@ -819,15 +828,28 @@ span {
 }
 
 .headerContainer {
-  padding: 10px 0 10px 5%;
+  width: 94%;
+  margin: 0 3%;
+  padding: 15px 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  /* background-color: yellow; */
 }
 
-.headerContainer img {
-  grid-column: 8 / 9;
-  width: 35px;
-  height: 35px;
-  margin: auto 0;
+.sideBar-nav {
+  align-self: center;
+  justify-self: center;
+  padding: 0;
+  margin: 0;
+  /* background-color: red; */
+  display: flex;
 }
+
+
 
 #welcome {
   grid-column: 1 / 8;
@@ -923,6 +945,15 @@ span {
 
 /* desktop styles */
 @media screen and (min-width: 1020px){
+
+
+.Btn-one {
+  font-size: 0.9em;
+}
+
+.Btn-two {
+  font-size: 0.9em;
+} 
   
 .homePage-Container {
   width: 90%;
@@ -951,9 +982,10 @@ span {
 
 
 .desktopMenu-container {
-  /* background-color: red; */
+  /* background-color: green; */
   height: 50px;
   margin: auto 0;
+  width: 70%;
 }
 
 
@@ -961,16 +993,17 @@ span {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
-  gap: 50px;
+  gap: 100px;
   list-style: none;
   padding: auto 0;
   margin: auto 0;
- align-items: center;
-  justify-content: center;
+  align-items: center;
+  justify-content: flex-end;
+  /* background-color: red; */
 }
 
 .desktopMenu-container .desktopNav-container li a {
-  font-size: 0.7em;
+  font-size: 0.8em;
   color: white;
 }
 
@@ -1078,7 +1111,7 @@ span {
 }
 
 .aboutMe-noteContainer p {
-  font-size: 1em;
+  font-size: 1.1em;
   margin: 20px 0 30px 0;
 }
 
@@ -1093,10 +1126,12 @@ span {
   grid-column: 1 / 9;
   margin-bottom: 20px;
   text-align: center;
+  font-size: 1.5em;
 }
 
 #portfolio p {
   padding-bottom: 50px;
+  font-size: 1.1em;
 }
 
 .portfolioSection-divContainer {

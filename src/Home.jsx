@@ -78,7 +78,7 @@ const handleContactSubmit = async (e) => {
 
   return (
     <div className="homePage-Container">
-      <header className="headerContainer grid">
+      <header className="headerContainer">
         <h1>SOLARCODES</h1>
 
         <div className='sideBar-nav'>
@@ -117,10 +117,10 @@ const handleContactSubmit = async (e) => {
       
       <section id="welcome"  className="grid">
         <span>I'm a</span>
-        <p  className="leading">WEB 3 <br /> ENGINEER AND A FULLSTACK DEVELOPER <span className='dot'></span> </p>
+        <p  className="leading">WEB 3 <br /> ENGINEER AND A <br /> FULLSTACK DEVELOPER <span className='dot'></span> </p>
         <div className="btn-container">
           <a href="/#portfolio" onClick={(e) => handleDesktopNavClick(e, 'portfolio')} className="portfolio-btn Btn-one">PORTFOLIO</a>
-        <a href=""  className="resume-btn Btn-two">RESUME</a>
+        <a href="/resume.pdf.pdf" className="resume-btn Btn-two" download>RESUME</a>
         </div>
       </section>
       <section id="About-Me">
@@ -136,19 +136,19 @@ const handleContactSubmit = async (e) => {
       </section>
       <section id="portfolio">
         <h2>PORTFOLIO</h2>
-        <p>Some of my awesome projects</p>
+        <p>SOME OF MY AWESOME PROJECTS</p>
         <div className='portfolioSection-divContainer' ref={(el) => portfolioRefs.current[0] = el}>
         <div  className='portfolioSection-imageContainer'> 
           <div className='portfolioSection-imageFrame'></div> 
           <div  className='portfolioSection-imageDiv'>
-            <img src="/projectOne_img.jpg" alt="" />
+            <img src="/soundnerd.jpg" alt="" />
           </div>
           </div>  
         
         <div  className='portfolioSection-noteContainer'>
             <h3  className="portfolioSection-header"> PROJECT <span>01</span></h3>  
            <h4 className="project-name" >Solarman Ecommerce Website</h4>
-           <p  className="project-note">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Architecto quasi molestiae amet deleniti veritatis, a dolorem doloremque, nam hic fugit nobis dicta voluptatem ipsam, tempore incidunt pariatur. Recusandae voluptates veniam voluptate sit magnam praesentium iure sint, quia minima maiores numquam, distinctio earum quas aperiam totam soluta autem tempore adipisci? Optio?</p> 
+           <p  className="project-note">This project is a small e commerce web application built with Node.js and Express, using server rendered EJS views and a simple MVC structure. It features clean backend organization with separate routes, controllers, models, and database configuration. Core functionality includes product browsing, product details and reviews, shopping cart and wishlist management, user authentication, and a multi step checkout process. The application also supports order tracking and serves static assets efficiently, demonstrating practical implementation of real world e commerce workflows and maintainable Express application design.</p> 
             <div className="projectTools-container">
               <div><img src="/java-script.png" alt="" /></div>
               <div><img src="/nodejs.png" alt="" /></div>
@@ -156,7 +156,7 @@ const handleContactSubmit = async (e) => {
              </div>
              <div className="portfolioSection-buttonContainer">
                <a href="https://e-commerce-website-3dut.onrender.com"  className="livePreview-Btn Btn-one">LIVE PREVIEW</a>
-               <a href=""  className="viewCode-Btn Btn-two">VIEW CODE</a>
+               <a href="https://github.com/SOLARMAN-png/E-Commerce-website"  className="viewCode-Btn Btn-two">VIEW CODE</a>
              </div>     
         </div> 
         </div>
@@ -164,21 +164,21 @@ const handleContactSubmit = async (e) => {
         <div  className='portfolioSection-imageContainer'> 
           <div className='portfolioSection-imageFrame'></div> 
           <div  className='portfolioSection-imageDiv'>
-            <img src="/projectOne_img.jpg" alt="" />
+            <img src="/soundnerd.jpg" alt="" />
           </div>
           </div>
         <div className='portfolioSection-noteContainer'>
            <h3  className="portfolioSection-header"> PROJECT <span>02</span></h3>
-        <h4 className="project-name" >Solarman JobFinder Website</h4>
-        <p  className="project-note">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Architecto quasi molestiae amet deleniti veritatis, a dolorem doloremque, nam hic fugit nobis dicta voluptatem ipsam, tempore incidunt pariatur. Recusandae voluptates veniam voluptate sit magnam praesentium iure sint, quia minima maiores numquam, distinctio earum quas aperiam totam soluta autem tempore adipisci? Optio?</p> 
+        <h4 className="project-name" >Soundnerd</h4>
+         <p  className="project-note">Soundnerd is a modern e-commerce platform for premium headphones, earphones, speakers, and audio accessories. I focused on solving real-world challenges such as creating a seamless shopping experience, optimizing performance, and ensuring responsive design. The project features intuitive navigation, reusable UI components, and a clean layout that helps users explore and compare products with ease.</p>   
             <div className="projectTools-container">
               <div><img src="/java-script.png" alt="" /></div>
-              <div><img src="/nodejs.png" alt="" /></div>
-              <div><img src="/git.png" alt="" /></div>
+              <div><img src="/react.ico" alt="" /></div>
+              <div><img src="/css-3.png" alt="" /></div>
              </div>
              <div className="portfolioSection-buttonContainer">
-               <a href="https://job-finder-app-qbc2.vercel.app/"  className="livePreview-Btn Btn-one">LIVE PREVIEW</a>
-               <a href=""  className="viewCode-Btn Btn-two">VIEW CODE</a>
+               <a href="https://soundnerd-peach.vercel.app/"  className="livePreview-Btn Btn-one">LIVE PREVIEW</a>
+               <a href="https://github.com/SOLARMAN-png/soundnerd-peach"  className="viewCode-Btn Btn-two">VIEW CODE</a>
              </div>
         </div>
         </div>
@@ -191,8 +191,8 @@ const handleContactSubmit = async (e) => {
           </div>
         <div  className='portfolioSection-noteContainer'>
           <h3  className="portfolioSection-header"> PROJECT <span>03</span></h3>
-        <h4 className="project-name" >Solarman Recipe Website</h4>
-         <p  className="project-note">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Architecto quasi molestiae amet deleniti veritatis, a dolorem doloremque, nam hic fugit nobis dicta voluptatem ipsam, tempore incidunt pariatur. Recusandae voluptates veniam voluptate sit magnam praesentium iure sint, quia minima maiores numquam, distinctio earum quas aperiam totam soluta autem tempore adipisci? Optio?</p>  
+        <h4 className="project-name" >Recipe Website</h4>
+         <p  className="project-note">My Recipe Website is a lightweight React single page application for browsing and viewing recipes. It features a clean, component driven structure with pages for home, recipe listings, and recipe details, along with a shared navigation bar. The project uses local JSON data for sample recipes, organized styling files, and basic testing tools. It is structured for rapid prototyping and incremental feature development, making it ideal for learning React fundamentals and building a simple recipe directory.</p>  
            <div className="projectTools-container">
               <div><img src="/java-script.png" alt="" /></div>
               <div><img src="/nodejs.png" alt="" /></div>
@@ -213,15 +213,15 @@ const handleContactSubmit = async (e) => {
           </div>
         <div className='portfolioSection-noteContainer'>
            <h3  className="portfolioSection-header"> PROJECT <span>04</span></h3>
-        <h4 className="project-name" >Solarman JobFinder Website</h4>
-        <p  className="project-note">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Architecto quasi molestiae amet deleniti veritatis, a dolorem doloremque, nam hic fugit nobis dicta voluptatem ipsam, tempore incidunt pariatur. Recusandae voluptates veniam voluptate sit magnam praesentium iure sint, quia minima maiores numquam, distinctio earum quas aperiam totam soluta autem tempore adipisci? Optio?</p> 
+        <h4 className="project-name" >JobFinder Website</h4>
+        <p  className="project-note">Job Finder Website is a responsive React single page application that simulates a lightweight job marketplace and onboarding experience. It uses local JSON data and client side routing to power job search, job details, company profiles, and career content. The app includes multi step onboarding, job posting interfaces, and account management flows such as login and password recovery. The project highlights solid front end fundamentals including component composition, form handling, state driven navigation, and user centered flow design.</p> 
             <div className="projectTools-container">
               <div><img src="/java-script.png" alt="" /></div>
               <div><img src="/nodejs.png" alt="" /></div>
               <div><img src="/git.png" alt="" /></div>
              </div>
              <div className="portfolioSection-buttonContainer">
-               <a href=""  className="livePreview-Btn Btn-one">LIVE PREVIEW</a>
+               <a href="https://job-finder-app-qbc2.vercel.app/"  className="livePreview-Btn Btn-one">LIVE PREVIEW</a>
                <a href=""  className="viewCode-Btn Btn-two">VIEW CODE</a>
              </div>
         </div>
@@ -232,51 +232,51 @@ const handleContactSubmit = async (e) => {
         <p>Main Technology Stacks</p>
         <ul class="grid">
         <li>
-          <img src="/java-script.png" alt="comet" />
+          <img src="/java-script.png" alt="JavaScript" />
           <h4 className="language">JavaScript</h4>
         </li>
         <li>
-          <img src="/react.ico" alt="comet" />
+          <img src="/react.ico" alt="React.js" />
           <h4  className="language">React.js</h4>
         </li>
         <li>
-          <img src="/html.png" alt="comet" />
+          <img src="/html.png" alt="HTML" />
           <h4   className="language">HTML</h4>
         </li>
         <li>
-          <img src="/css-3.png" alt="comet" />
+          <img src="/css-3.png" alt="CSS" />
           <h4  className="language">CSS</h4>
         </li>
         <li>
-          <img src="/git.png" alt="comet" />
+          <img src="/git.png" alt="Git" />
           <h4 className="language">Git</h4>
         </li>
         <li>
-          <img src="/github.png" alt="comet" />
+          <img src="/github.png" alt="GitHub" />
           <h4  className="language">GitHub</h4>
         </li>
         <li>
-          <img src="/nodejs.png" alt="comet" />
+          <img src="/nodejs.png" alt="Node.js" />
           <h4   className="language">Node.js</h4>
         </li>
         <li>
-          <img src="/access.png" alt="comet" />
+          <img src="/access.png" alt="MongoDB" />
           <h4  className="language">Mongodb</h4>
         </li>
         <li>
-          <img src="/nextjs-icon.png" alt="comet" />
+          <img src="/nextjs-icon.png" alt="next" />
           <h4 className="language">Nextjs</h4>
         </li>
         <li>
-          <img src="/tailwind-icon.png" alt="comet" />
+          <img src="/tailwind-icon.png" alt="Tailwind CSS" />
           <h4  className="language">Tailwind Css</h4>
         </li>
         <li>
-          <img src="/typescript-icon.png" alt="comet" />
+          <img src="/typescript-icon.png" alt="Typescript" />
           <h4   className="language">Typescript</h4>
         </li>
         <li>
-          <img src="/css-3.png" alt="comet" />
+          <img src="/css-3.png" alt="CSS" />
           <h4  className="language">CSS</h4>
         </li>
       </ul>
