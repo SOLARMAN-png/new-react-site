@@ -1,5 +1,38 @@
 import { useState, useEffect, useRef } from 'react';
 
+
+
+const fullText = "WEB 3  ENTHUSIAST AND A  FULLSTACK WEB DEVELOPER";
+
+ function TypewriterHero() {
+  const [displayed, setDisplayed] = useState("");
+  const [done, setDone] = useState(false);
+
+  useEffect(() => {
+    if (displayed.length < fullText.length) {
+      const timeout = setTimeout(() => {
+        setDisplayed(fullText.slice(0, displayed.length + 1));
+      }, 60); // speed in ms per character
+      return () => clearTimeout(timeout);
+    } else {
+      setDone(true);
+    }
+  }, [displayed]);
+
+  // Re-insert line breaks visually
+  const formattedText = displayed
+    .replace("WEB 3 ", "WEB 3 \n")
+    .replace("ENTHUSIAST AND A ", "ENTHUSIAST AND A \n");
+
+  return (
+    <p id="leading" style={{ whiteSpace: "pre-line" }}>
+      {formattedText}
+      {done && <span className="dot" />}
+      {!done && <span className="cursor">|</span>}
+    </p>
+  );
+}
+
 const HomePage = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const portfolioRefs = useRef([]);
@@ -116,11 +149,13 @@ const handleContactSubmit = async (e) => {
       </header>
       
       <section id="welcome"  className="grid">
-        <span>I'm a</span>
-        <p  className="leading">WEB 3 <br /> ENGINEER AND A <br /> FULLSTACK DEVELOPER <span className='dot'></span> </p>
+        <div>
+          <span>I'm a</span>
+          <TypewriterHero />
+        </div>
         <div className="btn-container">
           <a href="/#portfolio" onClick={(e) => handleDesktopNavClick(e, 'portfolio')} className="portfolio-btn Btn-one">PORTFOLIO</a>
-        <a href="/resume.pdf.pdf" className="resume-btn Btn-two" download>RESUME</a>
+        <a href="/tech-resume.pdf" className="resume-btn Btn-two" download>RESUME</a>
         </div>
       </section>
       <section id="About-Me">
@@ -191,16 +226,16 @@ const handleContactSubmit = async (e) => {
           </div>
         <div  className='portfolioSection-noteContainer'>
           <h3  className="portfolioSection-header"> PROJECT <span>03</span></h3>
-        <h4 className="project-name" >Recipe Website</h4>
-         <p  className="project-note">My Recipe Website is a lightweight React single page application for browsing and viewing recipes. It features a clean, component driven structure with pages for home, recipe listings, and recipe details, along with a shared navigation bar. The project uses local JSON data for sample recipes, organized styling files, and basic testing tools. It is structured for rapid prototyping and incremental feature development, making it ideal for learning React fundamentals and building a simple recipe directory.</p>  
+        <h4 className="project-name" >Solar-blog</h4> 
+         <p  className="project-note">This project is a compact blog platform built with Node.js and Express, using EJS for server-side rendering and a file-based SQLite database for persistence. It supports user registration, authentication, profile creation and editing, and CRUD operations for blog posts, including file uploads stored in a public uploads directory. The codebase separates concerns across routes, controllers, and models, and provides templates and partials for consistent UI. Static assets live in a public folder and configuration is centralized in a DB module. Designed for simplicity and clarity, the application is suitable for learning and small deployments while remaining extensible for additional features.</p>  
            <div className="projectTools-container">
               <div><img src="/java-script.png" alt="" /></div>
               <div><img src="/nodejs.png" alt="" /></div>
               <div><img src="/git.png" alt="" /></div>
              </div>
              <div className="portfolioSection-buttonContainer">
-               <a href=""  className="livePreview-Btn Btn-one">LIVE PREVIEW</a>
-               <a href=""  className="viewCode-Btn Btn-two">VIEW CODE</a>
+               <a href="https://solar-blogs.onrender.com/"  className="livePreview-Btn Btn-one">LIVE PREVIEW</a>
+               <a href="https://github.com/SOLARMAN-png/solar-blogs"  className="viewCode-Btn Btn-two">VIEW CODE</a>
              </div>
              </div>     
         </div>

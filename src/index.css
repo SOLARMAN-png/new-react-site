@@ -107,19 +107,6 @@ span {
   box-sizing: border-box;
 }
 
-/* .headerContainer {
-  grid-column: span 8;
-  padding: 0 0 0 5%;
-  margin: 0 0 50px 0;
-  position: fixed;
-  z-index: 1000;
-  top: 0;
-  left: 0;
-  width: 100%;
-  background-color: #0f172a;
-  border: 5px solid #0f172a;
-} */
-
 .headerContainer {
   width: 94%;
   margin: 0 3%;
@@ -146,7 +133,7 @@ span {
 }
 
 .headerContainer img {
-  grid-column: 8 / 9;
+  /* grid-column: 8 / 9; */
   width: 30px;
   height: 30px;
   margin: auto 0; 
@@ -237,17 +224,27 @@ span {
   margin-bottom: 0;
 }
 
-.leading {
+#leading {
   grid-column: 1 / 7;
-  font-size: 1.7em;
+  font-size: 1.2em;
   font-weight: 900;
+  /* background-color: red; */
 }
 
 .dot {
   display: inline-block;
-  width: 0.81rem;
-  height: 0.81rem;
+  width: 0.71rem;
+  height: 0.71rem;
   background-color: skyblue;
+}
+
+.cursor {
+  display: inline-block;
+  animation: blink 0.7s step-end infinite;
+}
+
+@keyframes blink {
+  50% { opacity: 0; }
 }
 
 .btn-container {
@@ -857,10 +854,11 @@ span {
 }
 
 
-.leading {
-  grid-column: 1 / 9;
-  font-size: 2.2em;
-  font-weight: 1200;
+#leading {
+  grid-column: 1 / 7;
+  font-size: 4em;
+  font-weight: 1400;
+  line-height: 1em;
 }
 
 #About-Me p {
@@ -969,6 +967,7 @@ span {
   /* background-color: #7cf; */
   width: 90%;
   box-sizing: border-box;
+  border-bottom: none;
 }
 
 .headerContainer h1 {
@@ -1029,12 +1028,12 @@ span {
 
 #welcome {
   grid-column: 1 / 8;
-  margin: 150px 0 100px 0;
+  margin: 180px 0 100px 0;
 }
 
 .leading {
   grid-column: 1 / 9;
-  font-size: 3.2em;
+  font-size: 3.5em;
   font-weight: 1500;
   padding-bottom: 20px;
 }
