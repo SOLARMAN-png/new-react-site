@@ -176,7 +176,7 @@ const handleContactSubmit = async (e) => {
         <div  className='portfolioSection-imageContainer'> 
           <div className='portfolioSection-imageFrame'></div> 
           <div  className='portfolioSection-imageDiv'>
-            <img src="/soundnerd.jpg" alt="" />
+            <img src="/TundeHub-landing.svg" alt="" />
           </div>
           </div>  
         
@@ -316,8 +316,7 @@ const handleContactSubmit = async (e) => {
         </li>
       </ul>
       <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc fringilla
-        lacus diam. Mauris fringilla consectetur nibh, sit amet tempus augue.
+       I have been able to master the art of using these stacks to produce scalable mobile and web applications to improve users experience.
       </p>
       </section>
         <section id="contact">

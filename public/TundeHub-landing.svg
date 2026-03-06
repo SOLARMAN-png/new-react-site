@@ -1,0 +1,426 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 960" width="1440" height="960">
+  <defs>
+    <!-- Main background -->
+    <linearGradient id="pageBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f7f4ef"/>
+      <stop offset="100%" style="stop-color:#ede8e0"/>
+    </linearGradient>
+
+    <!-- Orange accent gradient -->
+    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#e8651a"/>
+      <stop offset="100%" style="stop-color:#f5832e"/>
+    </linearGradient>
+
+    <!-- Dark accent -->
+    <linearGradient id="darkGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1a2e"/>
+      <stop offset="100%" style="stop-color:#16213e"/>
+    </linearGradient>
+
+    <!-- Hero section background -->
+    <linearGradient id="heroBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1a2e"/>
+      <stop offset="60%" style="stop-color:#0f3460"/>
+      <stop offset="100%" style="stop-color:#1a1a2e"/>
+    </linearGradient>
+
+    <!-- Card gradient -->
+    <linearGradient id="cardHover" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffffff"/>
+      <stop offset="100%" style="stop-color:#f9f6f1"/>
+    </linearGradient>
+
+    <!-- Search bar gradient -->
+    <linearGradient id="searchBg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffffff"/>
+      <stop offset="100%" style="stop-color:#f5f2ed"/>
+    </linearGradient>
+
+    <!-- Footer gradient -->
+    <linearGradient id="footerBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#111827"/>
+      <stop offset="100%" style="stop-color:#1f2937"/>
+    </linearGradient>
+
+    <!-- Orange glow -->
+    <filter id="orangeGlow">
+      <feGaussianBlur stdDeviation="8" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Soft shadow -->
+    <filter id="softShadow">
+      <feDropShadow dx="0" dy="4" stdDeviation="12" flood-color="#000000" flood-opacity="0.12"/>
+    </filter>
+
+    <!-- Card shadow -->
+    <filter id="cardShadow">
+      <feDropShadow dx="0" dy="8" stdDeviation="20" flood-color="#000000" flood-opacity="0.10"/>
+    </filter>
+
+    <!-- Nav shadow -->
+    <filter id="navShadow">
+      <feDropShadow dx="0" dy="2" stdDeviation="8" flood-color="#000000" flood-opacity="0.15"/>
+    </filter>
+
+    <!-- Aside shadow -->
+    <filter id="asideShadow">
+      <feDropShadow dx="8" dy="0" stdDeviation="20" flood-color="#000000" flood-opacity="0.3"/>
+    </filter>
+
+    <!-- Clip for aside -->
+    <clipPath id="asideClip">
+      <rect x="0" y="0" width="280" height="960"/>
+    </clipPath>
+  </defs>
+
+  <!-- ===================== PAGE BACKGROUND ===================== -->
+  <rect width="1440" height="960" fill="url(#pageBg)"/>
+
+  <!-- Subtle dot grid pattern -->
+  <pattern id="dotGrid" x="0" y="0" width="24" height="24" patternUnits="userSpaceOnUse">
+    <circle cx="1" cy="1" r="0.8" fill="#c8bfb0" opacity="0.5"/>
+  </pattern>
+  <rect width="1440" height="960" fill="url(#dotGrid)" opacity="0.4"/>
+
+  <!-- ===================== NAVBAR ===================== -->
+  <rect x="0" y="0" width="1440" height="68" fill="url(#darkGrad)" filter="url(#navShadow)"/>
+  <!-- Subtle bottom accent line -->
+  <rect x="0" y="66" width="1440" height="2" fill="url(#accentGrad)"/>
+
+  <!-- Hamburger menu icon (left) -->
+  <g transform="translate(22, 22)">
+    <rect x="0" y="0" width="26" height="3" rx="1.5" fill="#ffffff"/>
+    <rect x="0" y="10" width="26" height="3" rx="1.5" fill="#ffffff"/>
+    <rect x="0" y="20" width="18" height="3" rx="1.5" fill="#e8651a"/>
+  </g>
+
+  <!-- Site title: TundeHub. -->
+  <text x="720" y="44" font-family="'Trebuchet MS', sans-serif" font-size="26" font-weight="800" fill="#ffffff" text-anchor="middle" letter-spacing="-0.5">
+    Tunde<tspan fill="url(#accentGrad)">Hub</tspan><tspan fill="#e8651a">.</tspan>
+  </text>
+
+  <!-- Nav right icons -->
+  <!-- Search icon -->
+  <g transform="translate(1310, 20)">
+    <circle cx="12" cy="12" r="9" stroke="#ffffff" stroke-width="2" fill="none" opacity="0.8"/>
+    <line x1="19" y1="19" x2="26" y2="26" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round" opacity="0.8"/>
+  </g>
+
+  <!-- User icon -->
+  <g transform="translate(1355, 20)">
+    <circle cx="13" cy="10" r="7" stroke="#ffffff" stroke-width="2" fill="none" opacity="0.8"/>
+    <path d="M2 30 Q2 20 13 20 Q24 20 24 30" stroke="#ffffff" stroke-width="2" fill="none" stroke-linecap="round" opacity="0.8"/>
+  </g>
+
+  <!-- Cart icon with badge -->
+  <g transform="translate(1400, 18)">
+    <rect x="0" y="8" width="26" height="22" rx="3" stroke="#ffffff" stroke-width="2" fill="none" opacity="0.8"/>
+    <path d="M6 8 Q6 0 13 0 Q20 0 20 8" stroke="#ffffff" stroke-width="2" fill="none" opacity="0.8"/>
+    <!-- Cart count badge -->
+    <circle cx="24" cy="6" r="8" fill="url(#accentGrad)"/>
+    <text x="24" y="10" font-family="'Trebuchet MS', sans-serif" font-size="9" font-weight="700" fill="#ffffff" text-anchor="middle">0</text>
+  </g>
+
+  <!-- ===================== ASIDE / SIDEBAR (partially visible, peeking) ===================== -->
+  <!-- Dimmed overlay hint -->
+  <rect x="0" y="68" width="1440" height="892" fill="#000000" opacity="0.0"/>
+
+  <!-- Aside panel -->
+  <rect x="0" y="68" width="280" height="892" fill="#ffffff" filter="url(#asideShadow)" opacity="0.97"/>
+  <!-- Aside header -->
+  <rect x="0" y="68" width="280" height="60" fill="url(#darkGrad)"/>
+  <!-- Close X button in aside -->
+  <line x1="16" y1="82" x2="28" y2="94" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round"/>
+  <line x1="28" y1="82" x2="16" y2="94" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round"/>
+  <!-- Aside brand name -->
+  <text x="140" y="105" font-family="'Trebuchet MS', sans-serif" font-size="20" font-weight="800" fill="#ffffff" text-anchor="middle">
+    Tunde<tspan fill="#e8651a">Hub.</tspan>
+  </text>
+
+  <!-- Aside section: My Account -->
+  <rect x="0" y="136" width="280" height="1" fill="#e5e7eb"/>
+  <text x="18" y="160" font-family="'Trebuchet MS', sans-serif" font-size="10" font-weight="700" letter-spacing="3" fill="#e8651a">MY ACCOUNT</text>
+  <rect x="0" y="166" width="280" height="1" fill="#f3f4f6"/>
+
+  <g font-family="'Trebuchet MS', sans-serif" font-size="14" fill="#1a1a2e">
+    <!-- Profile -->
+    <rect x="0" y="170" width="280" height="44" fill="transparent"/>
+    <text x="18" y="197" fill="#374151">Profile</text>
+    <text x="260" y="197" fill="#9ca3af" font-size="16">›</text>
+    <rect x="0" y="213" width="280" height="1" fill="#f3f4f6"/>
+
+    <!-- Orders -->
+    <text x="18" y="236" fill="#374151">Orders</text>
+    <text x="260" y="236" fill="#9ca3af" font-size="16">›</text>
+    <rect x="0" y="252" width="280" height="1" fill="#f3f4f6"/>
+
+    <!-- Wishlist -->
+    <text x="18" y="275" fill="#374151">Wishlist</text>
+    <text x="260" y="275" fill="#9ca3af" font-size="16">›</text>
+    <rect x="0" y="291" width="280" height="1" fill="#f3f4f6"/>
+  </g>
+
+  <!-- Aside section: Categories -->
+  <rect x="0" y="306" width="280" height="1" fill="#e5e7eb"/>
+  <text x="18" y="330" font-family="'Trebuchet MS', sans-serif" font-size="10" font-weight="700" letter-spacing="3" fill="#e8651a">OUR CATEGORIES</text>
+  <rect x="0" y="336" width="280" height="1" fill="#f3f4f6"/>
+
+  <g font-family="'Trebuchet MS', sans-serif" font-size="14" fill="#374151">
+    <!-- Shoes -->
+    <rect x="0" y="340" width="280" height="44" fill="#fff8f5"/>
+    <text x="18" y="366">👟  Shoes</text>
+    <text x="260" y="366" fill="#9ca3af" font-size="16">›</text>
+    <rect x="0" y="383" width="280" height="1" fill="#f3f4f6"/>
+
+    <!-- Bags -->
+    <text x="18" y="406">👜  Bags</text>
+    <text x="260" y="406" fill="#9ca3af" font-size="16">›</text>
+    <rect x="0" y="422" width="280" height="1" fill="#f3f4f6"/>
+
+    <!-- Watches -->
+    <text x="18" y="445">⌚  Watches</text>
+    <text x="260" y="445" fill="#9ca3af" font-size="16">›</text>
+    <rect x="0" y="461" width="280" height="1" fill="#f3f4f6"/>
+
+    <!-- Electronics -->
+    <text x="18" y="484">💻  Electronics</text>
+    <text x="260" y="484" fill="#9ca3af" font-size="16">›</text>
+    <rect x="0" y="500" width="280" height="1" fill="#f3f4f6"/>
+  </g>
+
+  <!-- Aside section: Actions -->
+  <rect x="0" y="516" width="280" height="1" fill="#e5e7eb"/>
+  <text x="18" y="540" font-family="'Trebuchet MS', sans-serif" font-size="10" font-weight="700" letter-spacing="3" fill="#e8651a">ACTIONS</text>
+  <rect x="0" y="546" width="280" height="1" fill="#f3f4f6"/>
+
+  <g font-family="'Trebuchet MS', sans-serif" font-size="14">
+    <text x="18" y="572" fill="#374151">Login</text>
+    <text x="260" y="572" fill="#9ca3af" font-size="16">›</text>
+    <rect x="0" y="588" width="280" height="1" fill="#f3f4f6"/>
+    <text x="18" y="610" fill="#e8651a" font-weight="700">Register</text>
+    <text x="260" y="610" fill="#e8651a" font-size="16">›</text>
+  </g>
+
+  <!-- Aside divider line (right edge) -->
+  <rect x="279" y="68" width="1" height="892" fill="#e5e7eb"/>
+
+  <!-- ===================== MAIN CONTENT (offset from aside) ===================== -->
+
+  <!-- ===== HERO SECTION ===== -->
+  <rect x="280" y="68" width="1160" height="340" fill="url(#heroBg)"/>
+
+  <!-- Hero decorative geometric shapes -->
+  <circle cx="1350" cy="120" r="180" fill="#0f3460" opacity="0.5"/>
+  <circle cx="1380" cy="250" r="120" fill="#e8651a" opacity="0.08"/>
+  <circle cx="350" cy="350" r="150" fill="#0f3460" opacity="0.4"/>
+  <!-- Orange accent blob -->
+  <ellipse cx="900" cy="200" rx="500" ry="200" fill="#e8651a" opacity="0.04"/>
+
+  <!-- Decorative ring -->
+  <circle cx="1300" cy="200" r="130" stroke="#e8651a" stroke-width="1" fill="none" opacity="0.2"/>
+  <circle cx="1300" cy="200" r="100" stroke="#ffffff" stroke-width="0.5" fill="none" opacity="0.07"/>
+
+  <!-- Floating dots decoration -->
+  <circle cx="420" cy="110" r="3" fill="#e8651a" opacity="0.6"/>
+  <circle cx="450" cy="130" r="2" fill="#e8651a" opacity="0.4"/>
+  <circle cx="400" cy="140" r="1.5" fill="#ffffff" opacity="0.3"/>
+  <circle cx="1200" cy="320" r="3" fill="#e8651a" opacity="0.6"/>
+  <circle cx="1230" cy="310" r="2" fill="#ffffff" opacity="0.3"/>
+
+  <!-- Hero text content -->
+  <text x="480" y="165" font-family="'Trebuchet MS', sans-serif" font-size="13" letter-spacing="5" fill="#e8651a" font-weight="600">WELCOME TO</text>
+
+  <text x="480" y="230" font-family="'Trebuchet MS', sans-serif" font-size="58" font-weight="900" fill="#ffffff" letter-spacing="-1">
+    TUNDE<tspan fill="#e8651a">HUB</tspan>
+  </text>
+  <text x="480" y="260" font-family="'Trebuchet MS', sans-serif" font-size="24" font-weight="300" fill="#ffffff" opacity="0.5" letter-spacing="2">ONLINE STORE</text>
+
+  <text x="480" y="305" font-family="Georgia, serif" font-size="15" fill="#94a3b8" font-style="italic">
+    Order Bags, Shoes, Wristwatches, Electronics &amp; more — all in one place.
+  </text>
+
+  <!-- CTA buttons in hero -->
+  <rect x="480" y="328" width="170" height="50" rx="4" fill="url(#accentGrad)" filter="url(#orangeGlow)"/>
+  <text x="565" y="358" font-family="'Trebuchet MS', sans-serif" font-size="13" font-weight="700" fill="#ffffff" text-anchor="middle" letter-spacing="1">SHOP NOW</text>
+
+  <rect x="668" y="328" width="150" height="50" rx="4" fill="none" stroke="#ffffff" stroke-width="1.5" opacity="0.5"/>
+  <text x="743" y="358" font-family="'Trebuchet MS', sans-serif" font-size="13" fill="#ffffff" text-anchor="middle" letter-spacing="1" opacity="0.8">LEARN MORE</text>
+
+  <!-- Hero product image illustration (right side) -->
+  <!-- Shopping bag illustration -->
+  <g transform="translate(1100, 100)" opacity="0.9">
+    <!-- Bag body -->
+    <rect x="0" y="60" width="160" height="140" rx="10" fill="#ffffff" opacity="0.08"/>
+    <rect x="4" y="64" width="152" height="132" rx="8" fill="#e8651a" opacity="0.15"/>
+    <!-- Bag handles -->
+    <path d="M40 60 Q40 15 80 15 Q120 15 120 60" stroke="#ffffff" stroke-width="6" fill="none" stroke-linecap="round" opacity="0.3"/>
+    <!-- Bag label -->
+    <rect x="35" y="120" width="90" height="40" rx="4" fill="#ffffff" opacity="0.12"/>
+    <text x="80" y="136" font-family="'Trebuchet MS', sans-serif" font-size="9" font-weight="800" fill="#ffffff" text-anchor="middle" opacity="0.6" letter-spacing="2">TUNDE</text>
+    <text x="80" y="150" font-family="'Trebuchet MS', sans-serif" font-size="9" fill="#e8651a" text-anchor="middle" font-weight="700" letter-spacing="2">HUB.</text>
+    <!-- Price tag -->
+    <circle cx="140" cy="75" r="22" fill="url(#accentGrad)"/>
+    <text x="140" y="71" font-family="'Trebuchet MS', sans-serif" font-size="8" fill="#ffffff" text-anchor="middle" font-weight="600">FROM</text>
+    <text x="140" y="83" font-family="'Trebuchet MS', sans-serif" font-size="9" fill="#ffffff" text-anchor="middle" font-weight="800">$9.99</text>
+  </g>
+
+  <!-- ===== BROWSE COLLECTIONS BAR ===== -->
+  <rect x="280" y="408" width="1160" height="76" fill="url(#searchBg)" filter="url(#softShadow)"/>
+  <rect x="280" y="408" width="4" height="76" fill="url(#accentGrad)"/>
+
+  <!-- Browse label -->
+  <text x="310" y="455" font-family="'Trebuchet MS', sans-serif" font-size="15" font-weight="700" fill="#1a1a2e" letter-spacing="-0.3">Browse Collections</text>
+
+  <!-- Category pills -->
+  <!-- All (active) -->
+  <rect x="490" y="425" width="60" height="34" rx="17" fill="url(#accentGrad)"/>
+  <text x="520" y="447" font-family="'Trebuchet MS', sans-serif" font-size="12" font-weight="700" fill="#ffffff" text-anchor="middle">All</text>
+
+  <!-- Bags -->
+  <rect x="566" y="425" width="72" height="34" rx="17" fill="none" stroke="#d1d5db" stroke-width="1.5"/>
+  <text x="602" y="447" font-family="'Trebuchet MS', sans-serif" font-size="12" fill="#374151" text-anchor="middle">Bags</text>
+
+  <!-- Shoes -->
+  <rect x="654" y="425" width="72" height="34" rx="17" fill="none" stroke="#d1d5db" stroke-width="1.5"/>
+  <text x="690" y="447" font-family="'Trebuchet MS', sans-serif" font-size="12" fill="#374151" text-anchor="middle">Shoes</text>
+
+  <!-- Watches -->
+  <rect x="742" y="425" width="86" height="34" rx="17" fill="none" stroke="#d1d5db" stroke-width="1.5"/>
+  <text x="785" y="447" font-family="'Trebuchet MS', sans-serif" font-size="12" fill="#374151" text-anchor="middle">Watches</text>
+
+  <!-- Electronics -->
+  <rect x="844" y="425" width="104" height="34" rx="17" fill="none" stroke="#d1d5db" stroke-width="1.5"/>
+  <text x="896" y="447" font-family="'Trebuchet MS', sans-serif" font-size="12" fill="#374151" text-anchor="middle">Electronics</text>
+
+  <!-- Search input right side -->
+  <rect x="1020" y="426" width="380" height="33" rx="16" fill="#f3f4f6" stroke="#e5e7eb" stroke-width="1"/>
+  <text x="1042" y="447" font-family="Georgia, serif" font-size="12" fill="#9ca3af" font-style="italic">Search products...</text>
+  <!-- Search icon inside input -->
+  <circle cx="1384" cy="443" r="7" stroke="#9ca3af" stroke-width="1.5" fill="none"/>
+  <line x1="1389" y1="448" x2="1394" y2="453" stroke="#9ca3af" stroke-width="1.5" stroke-linecap="round"/>
+
+  <!-- ===== PRODUCT CATEGORY CARDS ===== -->
+  <!-- Section header -->
+  <text x="310" y="530" font-family="'Trebuchet MS', sans-serif" font-size="22" font-weight="800" fill="#1a1a2e" letter-spacing="-0.5">Shop By Category</text>
+  <rect x="310" y="537" width="60" height="3" rx="1.5" fill="url(#accentGrad)"/>
+  <text x="1410" y="530" font-family="'Trebuchet MS', sans-serif" font-size="13" fill="#e8651a" text-anchor="end">View All →</text>
+
+  <!-- CARD 1: BAGS -->
+  <rect x="310" y="555" width="250" height="280" rx="12" fill="url(#cardHover)" filter="url(#cardShadow)"/>
+  <rect x="310" y="555" width="250" height="160" rx="12" fill="#fdf2e9"/>
+  <rect x="310" y="695" width="250" height="20" fill="#fdf2e9"/>
+  <!-- Bag icon illustration -->
+  <g transform="translate(385, 590)">
+    <rect x="0" y="28" width="100" height="80" rx="8" fill="#e8651a" opacity="0.15"/>
+    <rect x="3" y="31" width="94" height="74" rx="6" fill="#e8651a" opacity="0.3"/>
+    <path d="M22 28 Q22 5 50 5 Q78 5 78 28" stroke="#e8651a" stroke-width="5" fill="none" stroke-linecap="round" opacity="0.7"/>
+    <rect x="25" y="68" width="50" height="22" rx="3" fill="#ffffff" opacity="0.6"/>
+    <rect x="310" y="715" width="250" height="2" fill="#f3f4f6"/>
+  </g>
+  <text x="435" y="742" font-family="'Trebuchet MS', sans-serif" font-size="16" font-weight="700" fill="#1a1a2e" text-anchor="middle">Bags</text>
+  <text x="435" y="762" font-family="Georgia, serif" font-size="12" fill="#6b7280" text-anchor="middle" font-style="italic">Totes, Clutches &amp; More</text>
+  <rect x="335" y="780" width="200" height="38" rx="6" fill="url(#accentGrad)"/>
+  <text x="435" y="804" font-family="'Trebuchet MS', sans-serif" font-size="12" font-weight="700" fill="#ffffff" text-anchor="middle" letter-spacing="1">SHOP BAGS</text>
+
+  <!-- CARD 2: SHOES -->
+  <rect x="580" y="555" width="250" height="280" rx="12" fill="url(#cardHover)" filter="url(#cardShadow)"/>
+  <rect x="580" y="555" width="250" height="160" rx="12" fill="#eef2ff"/>
+  <rect x="580" y="695" width="250" height="20" fill="#eef2ff"/>
+  <!-- Shoe icon -->
+  <g transform="translate(620, 600)">
+    <ellipse cx="85" cy="110" rx="80" ry="18" fill="#4f46e5" opacity="0.08"/>
+    <path d="M20 95 Q20 55 60 50 Q90 47 120 65 Q140 75 150 85 Q160 95 155 100 L20 100 Z" fill="#4f46e5" opacity="0.25"/>
+    <path d="M20 100 L155 100 L155 110 Q140 120 20 115 Z" fill="#4f46e5" opacity="0.4"/>
+    <path d="M60 50 Q65 30 80 25 Q95 20 100 40 Q110 48 120 65" stroke="#4f46e5" stroke-width="4" fill="none" stroke-linecap="round" opacity="0.5"/>
+    <circle cx="90" cy="78" r="4" fill="#ffffff" opacity="0.7"/>
+    <circle cx="100" cy="72" r="3" fill="#ffffff" opacity="0.5"/>
+    <circle cx="110" cy="78" r="4" fill="#ffffff" opacity="0.7"/>
+  </g>
+  <text x="705" y="742" font-family="'Trebuchet MS', sans-serif" font-size="16" font-weight="700" fill="#1a1a2e" text-anchor="middle">Shoes</text>
+  <text x="705" y="762" font-family="Georgia, serif" font-size="12" fill="#6b7280" text-anchor="middle" font-style="italic">Sneakers, Heels &amp; More</text>
+  <rect x="605" y="780" width="200" height="38" rx="6" fill="none" stroke="#4f46e5" stroke-width="1.5"/>
+  <text x="705" y="804" font-family="'Trebuchet MS', sans-serif" font-size="12" font-weight="700" fill="#4f46e5" text-anchor="middle" letter-spacing="1">SHOP SHOES</text>
+
+  <!-- CARD 3: WATCHES -->
+  <rect x="850" y="555" width="250" height="280" rx="12" fill="url(#cardHover)" filter="url(#cardShadow)"/>
+  <rect x="850" y="555" width="250" height="160" rx="12" fill="#f0fdf4"/>
+  <rect x="850" y="695" width="250" height="20" fill="#f0fdf4"/>
+  <!-- Watch icon -->
+  <g transform="translate(940, 580)">
+    <rect x="25" y="0" width="22" height="14" rx="3" fill="#059669" opacity="0.4"/>
+    <rect x="25" y="116" width="22" height="14" rx="3" fill="#059669" opacity="0.4"/>
+    <circle cx="36" cy="65" r="50" fill="none" stroke="#059669" stroke-width="3" opacity="0.25"/>
+    <circle cx="36" cy="65" r="42" fill="#ffffff" stroke="#059669" stroke-width="1.5" opacity="0.6"/>
+    <circle cx="36" cy="65" r="35" fill="#f0fdf4" opacity="0.7"/>
+    <!-- Watch face -->
+    <line x1="36" y1="35" x2="36" y2="65" stroke="#059669" stroke-width="2.5" stroke-linecap="round" opacity="0.7"/>
+    <line x1="36" y1="65" x2="54" y2="65" stroke="#1a1a2e" stroke-width="2" stroke-linecap="round" opacity="0.6"/>
+    <circle cx="36" cy="65" r="3" fill="#059669"/>
+    <!-- Hour marks -->
+    <circle cx="36" cy="33" r="2" fill="#059669" opacity="0.5"/>
+    <circle cx="36" cy="97" r="2" fill="#059669" opacity="0.5"/>
+    <circle cx="68" cy="65" r="2" fill="#059669" opacity="0.5"/>
+    <circle cx="4" cy="65" r="2" fill="#059669" opacity="0.5"/>
+  </g>
+  <text x="975" y="742" font-family="'Trebuchet MS', sans-serif" font-size="16" font-weight="700" fill="#1a1a2e" text-anchor="middle">Watches</text>
+  <text x="975" y="762" font-family="Georgia, serif" font-size="12" fill="#6b7280" text-anchor="middle" font-style="italic">Luxury &amp; Casual Styles</text>
+  <rect x="875" y="780" width="200" height="38" rx="6" fill="none" stroke="#059669" stroke-width="1.5"/>
+  <text x="975" y="804" font-family="'Trebuchet MS', sans-serif" font-size="12" font-weight="700" fill="#059669" text-anchor="middle" letter-spacing="1">SHOP WATCHES</text>
+
+  <!-- CARD 4: ELECTRONICS -->
+  <rect x="1120" y="555" width="270" height="280" rx="12" fill="url(#cardHover)" filter="url(#cardShadow)"/>
+  <rect x="1120" y="555" width="270" height="160" rx="12" fill="#fff1f2"/>
+  <rect x="1120" y="695" width="270" height="20" fill="#fff1f2"/>
+  <!-- Electronics icon (laptop) -->
+  <g transform="translate(1175, 595)">
+    <rect x="10" y="15" width="140" height="88" rx="6" fill="#e11d48" opacity="0.2"/>
+    <rect x="14" y="19" width="132" height="80" rx="4" fill="#e11d48" opacity="0.3"/>
+    <!-- Screen content lines -->
+    <rect x="24" y="29" width="60" height="5" rx="2" fill="#ffffff" opacity="0.5"/>
+    <rect x="24" y="40" width="40" height="4" rx="2" fill="#ffffff" opacity="0.3"/>
+    <rect x="24" y="51" width="80" height="4" rx="2" fill="#ffffff" opacity="0.3"/>
+    <rect x="24" y="62" width="55" height="4" rx="2" fill="#ffffff" opacity="0.3"/>
+    <!-- Keyboard base -->
+    <rect x="0" y="103" width="162" height="12" rx="3" fill="#e11d48" opacity="0.35"/>
+    <rect x="50" y="112" width="62" height="5" rx="2" fill="#e11d48" opacity="0.2"/>
+  </g>
+  <text x="1255" y="742" font-family="'Trebuchet MS', sans-serif" font-size="16" font-weight="700" fill="#1a1a2e" text-anchor="middle">Electronics</text>
+  <text x="1255" y="762" font-family="Georgia, serif" font-size="12" fill="#6b7280" text-anchor="middle" font-style="italic">Gadgets &amp; Accessories</text>
+  <rect x="1145" y="780" width="220" height="38" rx="6" fill="none" stroke="#e11d48" stroke-width="1.5"/>
+  <text x="1255" y="804" font-family="'Trebuchet MS', sans-serif" font-size="12" font-weight="700" fill="#e11d48" text-anchor="middle" letter-spacing="1">SHOP ELECTRONICS</text>
+
+  <!-- ===== PROMO BANNER ===== -->
+  <rect x="280" y="855" width="1160" height="70" rx="8" fill="url(#darkGrad)" filter="url(#softShadow)"/>
+  <rect x="280" y="855" width="5" height="70" rx="2" fill="url(#accentGrad)"/>
+  <!-- Decorative circle in banner -->
+  <circle cx="1340" cy="890" r="50" fill="#e8651a" opacity="0.08"/>
+  <circle cx="1380" cy="870" r="30" fill="#e8651a" opacity="0.06"/>
+
+  <text x="310" y="882" font-family="'Trebuchet MS', sans-serif" font-size="11" letter-spacing="4" fill="#e8651a" font-weight="700">LIMITED OFFER</text>
+  <text x="310" y="907" font-family="'Trebuchet MS', sans-serif" font-size="20" font-weight="800" fill="#ffffff">Free Shipping on Orders Over $50! 🚀</text>
+  <rect x="1200" y="868" width="200" height="40" rx="6" fill="url(#accentGrad)"/>
+  <text x="1300" y="893" font-family="'Trebuchet MS', sans-serif" font-size="13" font-weight="700" fill="#ffffff" text-anchor="middle" letter-spacing="1">CLAIM OFFER</text>
+
+  <!-- ===================== FOOTER ===================== -->
+  <rect x="0" y="930" width="1440" height="30" fill="url(#footerBg)"/>
+  <!-- Orange top border -->
+  <rect x="0" y="930" width="1440" height="2" fill="url(#accentGrad)"/>
+
+  <!-- Footer cols (compressed into footer strip) -->
+  <!-- Our Categories label -->
+  <text x="310" y="950" font-family="'Trebuchet MS', sans-serif" font-size="10" font-weight="700" fill="#e8651a" letter-spacing="2">OUR CATEGORIES:</text>
+  <text x="480" y="950" font-family="'Trebuchet MS', sans-serif" font-size="10" fill="#9ca3af">Bags  ·  Shoes  ·  Watches  ·  Electronics</text>
+
+  <!-- Customer service -->
+  <text x="800" y="950" font-family="'Trebuchet MS', sans-serif" font-size="10" font-weight="700" fill="#e8651a" letter-spacing="2">SUPPORT:</text>
+  <text x="880" y="950" font-family="'Trebuchet MS', sans-serif" font-size="10" fill="#9ca3af">Contact Us  ·  Returns  ·  Site Map</text>
+
+  <!-- Copyright -->
+  <text x="1400" y="950" font-family="'Trebuchet MS', sans-serif" font-size="10" fill="#6b7280" text-anchor="end">Copyright © TundeHub 2025</text>
+
+</svg>
